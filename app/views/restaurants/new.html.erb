@@ -1,0 +1,12 @@
+
+<h1>Restaurants#new</h1>
+<p>Form to add a new restaurant -> will link to create action upon submit</p>
+
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :category, collection: ["chinese","italian","japanese","french","belgian"] %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.button :submit %>
+<% end %>
